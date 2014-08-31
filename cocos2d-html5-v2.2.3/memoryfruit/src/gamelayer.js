@@ -3,7 +3,7 @@
  */
 
 
-var gscore = 0;
+var gscore;
 
 var Gamelayer = cc.Layer.extend({
 
@@ -23,6 +23,7 @@ var Gamelayer = cc.Layer.extend({
     {
         this._super();
 
+        gscore = 0;
         this.score = 0;
         this.scoreNum = 0;
 
