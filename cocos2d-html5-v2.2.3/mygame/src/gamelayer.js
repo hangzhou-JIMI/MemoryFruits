@@ -91,6 +91,10 @@ var Gamelayer = cc.Layer.extend({
     {
         if(!arguments[0]) drtime = 0.2;
 
+        if(this.outfruit!=null)
+            this.outfruit.removeFromParent(true);
+        this.outfruit=null;
+
         var size = cc.Director.getInstance().getWinSize();
 
         this.lastfruit = this.indexfruit;
