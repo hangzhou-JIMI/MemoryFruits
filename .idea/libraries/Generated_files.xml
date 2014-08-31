@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/MemoryFruits/src/GameApp.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/MemoryFruits/libs/egretd.js" />
+      <root url="file://$PROJECT_DIR$/MemoryFruits/libs/egretd.js" />
+      <root url="file://$PROJECT_DIR$/MenoryFruits/src/GameApp.js" />
+      <root url="file://$PROJECT_DIR$/MenoryFruits/src/LoadingUI.js" />
+      <root url="file://$PROJECT_DIR$/MemoryFruits/src/LoadingUI.js" />
+      <root url="file://$PROJECT_DIR$/MemoryFruits/src/GameApp.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
