@@ -96,8 +96,9 @@ var Gamelayer = cc.Layer.extend({
         this.lastfruit = this.indexfruit;
         this.outfruit = this.fruit;
         var tomove = cc.MoveTo.create(drtime,cc.p(-200,size.height/2+100));
-        var destoryImg = cc.CallFunc.create(function(){this.outfruit.removeFromParent(true);this.outfruit=null;},this);
-        this.outfruit.runAction(cc.Sequence.create(tomove,destoryImg));
+        var destoryImg = cc.CallFunc.create(function(){if(this.outfruit!=null)this.outfruit.removeFromParent(true);this.outfruit=null;},this);
+        if(this.outfruit!=null)
+            this.outfruit.runAction(cc.Sequence.create(tomove,destoryImg));
     },
 
     on_yes_btn:function()
