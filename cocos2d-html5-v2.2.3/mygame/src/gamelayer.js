@@ -10,6 +10,8 @@ var Gamelayer = cc.Layer.extend({
     yesbtn:null,
     nobtn:null,
     fruit:null,
+    score:0,
+    scoreNum:0,
     score_label:null,
 
     outfruit:null,
@@ -21,7 +23,8 @@ var Gamelayer = cc.Layer.extend({
     {
         this._super();
 
-        gscore = 0;
+        this.score = 0;
+        this.scoreNum = 0;
 
         var size = cc.Director.getInstance().getWinSize();
 
@@ -143,8 +146,22 @@ var Gamelayer = cc.Layer.extend({
     //win
     on_win:function()
     {
-        gscore += 10;
-        this.score_label.setString("您当前的分数为:"+gscore);
+        this.scoreNum++;
+        if(this.scoreNum<=5)
+            this.score += 10;
+        else if(this.scoreNum >5 && this.scoreNum <= 10 )
+            this.score += 15;
+        else if(this.scoreNum > 10 && this.scoreNum <= 20 )
+            this.score += 20;
+        else if(this.scoreNum > 20 && this.scoreNum <= 40)
+            this.score += 30;
+        else if(this.scoreNum >40 && this.scoreNum <= 100 )
+            this.score += 50;
+        else
+            this.score += 100;
+
+        gscore = this.score;
+        this.score_label.setString("您当前的分数为:"+this.score);
     },
 
     //fail
