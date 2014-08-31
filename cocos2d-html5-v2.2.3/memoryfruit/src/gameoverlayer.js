@@ -10,6 +10,7 @@ var Gameoverlayer = cc.Layer.extend({
     backbtn:null,
     resetMenu:null,
     backMenu:null,
+    shareMenu:null,
     score_lab:null,
     txt_lab:null,
 
@@ -40,15 +41,17 @@ var Gameoverlayer = cc.Layer.extend({
         this.addChild(this.resetMenu);
         this.addChild(this.backMenu);
 
-        var shareImg = cc.Sprite.create(s_over_share);
-        shareImg.setPosition(size.width/2 , size.height/2 - 350 );
-        this.addChild(shareImg);
+        var shareImg = cc.MenuItemImage.create(s_over_share,s_over_share,this.WeiXinShareBtn , this);
+        this.shareMenu = cc.Menu.create(shareImg);
+        this.shareMenu.setAnchorPoint(0,0);
+        this.shareMenu.setPosition(size.width/2 , size.height/2 - 350 );
+        this.addChild(this.shareMenu);
 
         this.score_lab = cc.LabelTTF.create("您的得分是:"+gscore,"Arial",25);
         this.score_lab.setPosition(size.width/2,size.height/2 + 100);
         this.addChild(this.score_lab);
 
-        this.txt_lab = cc.LabelTTF.create("您敏捷的头脑击败了"+(gscore/2>100?100:gscore/2)+"%的人类","黑体",30);
+        this.txt_lab = cc.LabelTTF.create("您敏捷的头脑击败了"+parseInt(gscore/130>100?100:gscore/130)+"%的人类","黑体",30);
         this.txt_lab.setPosition(size.width/2 , size.height/2-50);
         this.txt_lab.setColor(cc.c3(0,0,0));
         this.addChild(this.txt_lab);
@@ -78,6 +81,29 @@ var Gameoverlayer = cc.Layer.extend({
         scene.addChild(tittle);
         tittle.init();
         cc.Director.getInstance().replaceScene(scene);
+    },
+
+    WeiXinShareBtn:function()
+    {
+        var scaleToA = cc.ScaleTo.create(0.1,0.9,0.9);
+        var scaleToB = cc.ScaleTo.create(0.1, 1, 1);
+        var func = cc.CallFunc.create(function(){
+            if (typeof WeixinJSBridge == "undefined")
+            {
+                alert("请通过微信分享文章");
+            }
+            else
+            {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "title": "记忆水果游戏",
+                    "link": "http://www.luzexi.com/html5game/memoryfruit/index.html",
+                    "desc": "我敏捷的头脑可以得到00分数，已经超越人类的极限。",
+                    "img_url": "http://www.luzexi.com/html5game/memoryfruit/res/HD/游戏界面_0002_菠萝.png"
+                });
+            }
+        },this);
+        this.shareMenu.runAction(cc.Sequence.create(scaleToA,scaleToB,func));
+
     }
 
 });

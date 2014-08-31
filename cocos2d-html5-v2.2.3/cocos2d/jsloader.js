@@ -297,7 +297,7 @@
         var canvasNode = document.getElementById(c.tag);
         canvasNode.style.backgroundColor = "black";
         canvasNode.parentNode.appendChild(loadJsImg);
-        
+
         var canvasStyle = getComputedStyle?getComputedStyle(canvasNode):canvasNode.currentStyle;
         loadJsImg.style.left = canvasNode.offsetLeft + (parseFloat(canvasStyle.width) - loadJsImg.width)/2 + "px";
         loadJsImg.style.top = canvasNode.offsetTop + (parseFloat(canvasStyle.height) - loadJsImg.height)/2 + "px";
