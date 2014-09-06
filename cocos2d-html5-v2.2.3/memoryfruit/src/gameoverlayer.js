@@ -13,10 +13,17 @@ var Gameoverlayer = cc.Layer.extend({
     shareMenu:null,
     score_lab:null,
     txt_lab:null,
+    share_layer:null,
+    share_label:null,
 
     init:function()
     {
         var size = cc.Director.getInstance().getWinSize();
+
+        if( 'touches' in sys.capabilities )
+            this.setTouchEnabled(true);
+        else if ('mouse' in sys.capabilities )
+            this.setMouseEnabled(true);
 
         var bg = cc.LayerColor.create(cc.c4b(200,200,100,255));
         this.addChild(bg);
@@ -96,16 +103,40 @@ var Gameoverlayer = cc.Layer.extend({
             }
             else
             {
-                var share_layer = cc.LayerColor.create(cc.c4b(255,255,255,100));
-                var share_label = cc.LabelTTF.create("点击分享朋友圈","",20);
-                share_label.setPosition(size.width- 100 , size.height -100);
-                //share_layer.addTouchEventListener()
-                this.addChild(share_layer);
-                this.addChild(share_label);
+                this.share_layer = cc.LayerColor.create(cc.c4b(0,0,0,200));
+                this.share_label = cc.LabelTTF.create("点击分享朋友圈↑↑↑","",30);
+                this.share_label.setColor(cc.c3b(255,0,0));
+                this.share_label.setPosition(size.width - 150 , size.height -30);
+                this.addChild(this.share_layer);
+                this.addChild(this.share_label);
             }
         },this);
         this.shareMenu.runAction(cc.Sequence.create(scaleToA,scaleToB,func));
 
+    },
+
+    remove_sharelayer:function()
+    {
+        if(this.share_layer != null )
+        {
+            this.share_layer.removeFromParent(true);
+            this.share_layer = null;
+        }
+        if(this.share_label!=null)
+        {
+            this.share_label.removeFromParent(true);
+            this.share_label = null;
+        }
+    },
+
+    onMouseUp:function (event) {
+
+        this.remove_sharelayer();
+    },
+
+    onTouchBegan:function(touch, event)
+    {
+        this.remove_sharelayer();
     }
 
 });

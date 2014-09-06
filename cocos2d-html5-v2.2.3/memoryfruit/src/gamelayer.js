@@ -220,7 +220,7 @@ var Gamelayer = cc.Layer.extend({
         var scene = cc.Scene.create();
         var gameover = new Gameoverlayer();
         scene.addChild(gameover);
-//        gameover.init();
+        gameover.init();
         cc.Director.getInstance().replaceScene(scene);
     }
  }
