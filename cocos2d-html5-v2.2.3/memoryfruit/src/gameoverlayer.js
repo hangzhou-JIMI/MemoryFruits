@@ -58,12 +58,13 @@ var Gameoverlayer = cc.Layer.extend({
         this.score_lab.setPosition(size.width/2,size.height/2 + 100);
         this.addChild(this.score_lab);
 
-        this.txt_lab = cc.LabelTTF.create("您敏捷的头脑击败了"+parseInt(gscore/130>100?100:gscore/130)+"%的人类","黑体",30);
+        var score_per = parseInt(gscore/20>100?100:gscore/20);
+        this.txt_lab = cc.LabelTTF.create("您敏捷的头脑击败了"+score_per+"%的人类","黑体",30);
         this.txt_lab.setPosition(size.width/2 , size.height/2-50);
         this.txt_lab.setColor(cc.c3(0,0,0));
         this.addChild(this.txt_lab);
 
-        window.shareData.tTitle = "你敏捷的头脑超越"+parseInt(gscore/130>100?100:gscore/130)+"%人类的极限";
+        window.shareData.tTitle = "你敏捷的头脑获得"+gscore+"超越了"+score_per+"%人类的极限";
     },
 
     on_reset:function()
