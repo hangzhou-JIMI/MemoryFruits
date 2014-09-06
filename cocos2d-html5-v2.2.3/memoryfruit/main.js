@@ -29,8 +29,8 @@ var cocos2dApp = cc.Application.extend({
     ctor:function (scene) {
         this._super();
         this.startScene = scene;
-        cc.COCOS2D_DEBUG = this.config['COCOS2D_DEBUG'];
-        cc.initDebugSetting();
+        //cc.COCOS2D_DEBUG = this.config['COCOS2D_DEBUG'];
+        //cc.initDebugSetting();
         cc.setup(this.config['tag']);
         cc.AppController.shareAppController().didFinishLaunchingWithOptions();
     },
@@ -69,7 +69,7 @@ var cocos2dApp = cc.Application.extend({
 
         cc.FileUtils.getInstance().setSearchResolutionsOrder(resDirOrders);
         director.setContentScaleFactor(resourceSize.width / designSize.width);
-        cc.EGLView.getInstance().setDesignResolutionSize(designSize.width, designSize.height, cc.RESOLUTION_POLICY.NO_BORDER);
+        cc.EGLView.getInstance().setDesignResolutionSize(designSize.width, designSize.height, cc.RESOLUTION_POLICY.EXACT_FIT);
         cc.EGLView.getInstance().resizeWithBrowserSize(true);
 
         // turn on display FPS

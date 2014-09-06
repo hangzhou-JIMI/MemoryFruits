@@ -76,9 +76,9 @@ var Gamelayer = cc.Layer.extend({
 
         this.scheduleUpdate();
 
-        this.res_fruits = [s_fruit_shumei,s_fruit_boluo,s_fruit_yingtao,s_fruit_ningmeng,s_fruit_caomei,s_fruit_li,s_fruit_putao,s_fruit_pingguo,s_fruit_taozi,s_fruit_xigua];
+        this.res_fruits = [s_fruit_shumei,s_fruit_boluo,s_fruit_caomei,s_fruit_putao,s_fruit_xigua];
 
-        this.lastfruit = parseInt(Math.random()*10)%10;
+        this.lastfruit = parseInt(Math.random()*10)%5;
         this.indexfruit = this.lastfruit;
         this.fruit = cc.Sprite.create(this.res_fruits[this.lastfruit]);
         this.fruit.setPosition(size.width/2,size.height/2+100);
@@ -120,7 +120,7 @@ var Gamelayer = cc.Layer.extend({
         var tomove = cc.MoveTo.create(drtime,cc.p(size.width/2,size.height/2+100));
 
         var win = (Math.random()>0.3);
-        var index = win ? this.lastfruit :parseInt(Math.random()*10)%10;
+        var index = win ? this.lastfruit :parseInt(Math.random()*10)%5;
 
         this.indexfruit = index;
         this.fruit = cc.Sprite.create(this.res_fruits[index]);

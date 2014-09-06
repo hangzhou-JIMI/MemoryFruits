@@ -58,8 +58,8 @@
       <file leaf-file-name="gamelayer.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memoryfruit/src/gamelayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3510">
-              <caret line="223" column="20" selection-start-line="223" selection-start-column="20" selection-end-line="223" selection-end-column="20" />
+            <state vertical-scroll-proportion="-2.0769231" vertical-offset="966" max-vertical-offset="3510">
+              <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -78,21 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jsloader.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cocos2d/jsloader.js">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/memoryfruit/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3696" max-vertical-offset="5400">
-              <caret line="314" column="24" selection-start-line="314" selection-start-column="24" selection-end-line="314" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.32125205" vertical-offset="285" max-vertical-offset="1425">
+              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/memoryfruit/main.js">
+      <file leaf-file-name="resource.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/memoryfruit/src/resource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40691927" vertical-offset="818" max-vertical-offset="1425">
-              <caret line="71" column="124" selection-start-line="71" selection-start-column="124" selection-end-line="71" selection-end-column="124" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="900">
+              <caret line="39" column="18" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -174,7 +174,6 @@
         <option value="$PROJECT_DIR$/mygame/src/gamelayer.js" />
         <option value="$PROJECT_DIR$/cocos2d/jsloader.js" />
         <option value="$PROJECT_DIR$/memoryfruit/src/MyAPP.js" />
-        <option value="$PROJECT_DIR$/memoryfruit/src/resource.js" />
         <option value="$PROJECT_DIR$/cocos2d/core/CCLoader.js" />
         <option value="$PROJECT_DIR$/cocos2d/core/platform/CCApplication.js" />
         <option value="$PROJECT_DIR$/memoryfruit/index.html" />
@@ -182,8 +181,9 @@
         <option value="$PROJECT_DIR$/memoryfruit/cocos2d.js" />
         <option value="dup.baidustatic.com/tpl/ctm3.js" />
         <option value="$PROJECT_DIR$/memoryfruit/src/MyApp.js" />
-        <option value="$PROJECT_DIR$/memoryfruit/src/gamelayer.js" />
         <option value="$PROJECT_DIR$/memoryfruit/src/gameoverlayer.js" />
+        <option value="$PROJECT_DIR$/memoryfruit/src/resource.js" />
+        <option value="$PROJECT_DIR$/memoryfruit/src/gamelayer.js" />
         <option value="$PROJECT_DIR$/memoryfruit/main.js" />
       </list>
     </option>
@@ -291,6 +291,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cocos2d-html5-v2.2.3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cocos2d-html5-v2.2.3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="memoryfruit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -731,7 +749,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3206687" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21286735" sideWeight="0.67849225" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21286735" sideWeight="0.67849225" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39513677" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -972,14 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/memoryfruit/src/resource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="http://dup.baidustatic.com/tpl/ctm3.js">
       <provider selected="true" editor-type-id="httpFileEditor">
         <state />
@@ -1036,14 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/memoryfruit/src/gamelayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2916" max-vertical-offset="3510">
-          <caret line="223" column="20" selection-start-line="223" selection-start-column="20" selection-end-line="223" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.Trash/samples/tests/TouchesTest/TouchesTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30807248" vertical-offset="1238" max-vertical-offset="1845">
@@ -1076,10 +1078,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/memoryfruit/src/resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="900">
+          <caret line="39" column="18" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/memoryfruit/src/gamelayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0769231" vertical-offset="966" max-vertical-offset="3510">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/memoryfruit/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40691927" vertical-offset="818" max-vertical-offset="1425">
-          <caret line="71" column="124" selection-start-line="71" selection-start-column="124" selection-end-line="71" selection-end-column="124" />
+        <state vertical-scroll-proportion="0.32125205" vertical-offset="285" max-vertical-offset="1425">
+          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
           <folding />
         </state>
       </provider>
