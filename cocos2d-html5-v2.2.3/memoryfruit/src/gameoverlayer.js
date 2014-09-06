@@ -94,12 +94,7 @@ var Gameoverlayer = cc.Layer.extend({
             }
             else
             {
-                WeixinJSBridge.invoke('shareTimeline', {
-                    "title": "记忆水果游戏",
-                    "link": "http://www.luzexi.com/html5game/memoryfruit/index.html",
-                    "desc": "我敏捷的头脑可以得到00分数，已经超越人类的极限。",
-                    "img_url": "http://www.luzexi.com/html5game/memoryfruit/res/HD/游戏界面_0002_菠萝.png"
-                });
+                window.shareData.tTitle = "你敏捷的头脑超越"+parseInt(gscore/130>100?100:gscore/130)+"%人类的极限";
             }
         },this);
         this.shareMenu.runAction(cc.Sequence.create(scaleToA,scaleToB,func));

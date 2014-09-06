@@ -21,7 +21,41 @@
     </style>
 </head>
 <body style="padding:0; margin: 0; background: #000;">
-<canvas id="gameCanvas" width="321" height="480"></canvas>
-<script src="cocos2d.js?verstion=1.0.1"></script>
+<canvas id="gameCanvas" width="320" height="480"></canvas>
+<script language="JavaScript">var js_version="1.0.0";</script>
+<script src="cocos2d.js"></script>
+<script language="javascript">
+    window.shareData = {
+        "imgUrl": "http://www.luzexi.com/html5game/memoryfruit/res/HD/share.png",
+        "timeLineLink": "http://www.luzexi.com/html5game/memoryfruit/index.html",
+        "tTitle": "记忆水果游戏",
+        "tContent": "我在游戏中敏捷的头脑已经超越人类的极限"
+    };
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function(e){});
+        });
+
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": window.shareData.imgUrl,
+                "link": window.shareData.timeLineLink,
+                "desc": window.shareData.tContent,
+                "title": window.shareData.tTitle
+            }, function(e){});
+        });
+    }, false);
+</script>
+<script type="text/javascript">
+    /*20:3 创建于 2014-09-06*/
+    var cpro_id = "u1703313";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/cm.js" type="text/javascript"></script>
 </body>
 </html>

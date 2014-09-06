@@ -53,13 +53,13 @@ var Gamelayer = cc.Layer.extend({
         yesMenu.setPosition(size.width/2+150,size.height/2-250);
         noMenu.setPosition(size.width/2-150,size.height/2-250);
 
-        var tittle_lab = cc.LabelTTF.create("限定时间内判断水果是否与上个相同","黑体",25);
+        var tittle_lab = cc.LabelTTF.create("限定时间内判断水果是否与上个相同","Arial",25);
         tittle_lab.setAnchorPoint(0.5,0.5);
         this.addChild(tittle_lab);
         tittle_lab.setPosition(size.width/2,size.height-150);
         tittle_lab.setColor(cc.c4b(200,0,0,255));
 
-        this.score_label = cc.LabelTTF.create("您当前的分数为:0","黑体",40);
+        this.score_label = cc.LabelTTF.create("您当前的分数为:0","Arial",40);
         this.score_label.setAnchorPoint(0,1);
         this.addChild(this.score_label);
         this.score_label.setPosition(50,size.height-50);

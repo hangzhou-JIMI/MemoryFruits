@@ -39,7 +39,6 @@
         //SingleEngineFile:'',
         appFiles:[
             'src/resource.js',
-            'src/myApp.js',//add your own files in order here
             'src/ui_tittle.js',
             'src/gamelayer.js',
             'src/gameoverlayer.js'
