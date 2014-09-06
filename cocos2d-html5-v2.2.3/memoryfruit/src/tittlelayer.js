@@ -6,7 +6,7 @@
 
 
 
-var Tittle_layer = cc.LayerColor.extend({
+var Tittle_layer = cc.Layer.extend({
  	background_layer:null,
 	start_button:null,
 	tittle_lable:null,

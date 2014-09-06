@@ -380,7 +380,7 @@ cc.Application = cc.Class.extend(/** @lends cc.Application# */{
                 director.mainLoop();
                 w.requestAnimFrame(callback);
             };
-            //cc.log(window.requestAnimFrame);
+//            cc.log(window.requestAnimFrame);
             w.requestAnimFrame(callback);
         } else {
             callback = function () {

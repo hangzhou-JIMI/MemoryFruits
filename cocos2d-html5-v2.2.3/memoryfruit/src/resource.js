@@ -1,6 +1,3 @@
-var s_HelloWorld = "HelloWorld.jpg";
-var s_CloseNormal = "CloseNormal.png";
-var s_CloseSelected = "CloseSelected.png";
 
 var s_tittle_logo = "主界面_0001_logo.png";
 var s_tittle_button= "主界面_0000_start.png";
@@ -29,9 +26,6 @@ var s_over_gameover = "over_0005_gameover.png";
 
 var g_resources = [
     //image
-    s_HelloWorld,
-    s_CloseNormal,
-    s_CloseSelected,
 
     s_tittle_logo,
     s_tittle_button,

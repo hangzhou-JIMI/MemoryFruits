@@ -21,7 +21,7 @@ var Gamelayer = cc.Layer.extend({
     indexfruit:0,
     res_fruits:null,
 
-    cost_time:5,
+    cost_time:3,
     start_time:0,
 
     init:function()
@@ -187,23 +187,23 @@ var Gamelayer = cc.Layer.extend({
         if (this.scoreNum <= 5)
         {
             this.score += 10;
-            this.cost_time = 4.5;
-        }
-        else if(this.scoreNum >5 && this.scoreNum <= 10 ) {
-            this.score += 15;
-            this.cost_time = 4;
-        }
-        else if(this.scoreNum > 10 && this.scoreNum <= 20 ) {
-            this.score += 20;
-            this.cost_time = 3.5;
-        }
-        else if(this.scoreNum > 20 && this.scoreNum <= 40) {
-            this.score += 30;
             this.cost_time = 3;
         }
-        else if(this.scoreNum >40 && this.scoreNum <= 100 ) {
-            this.score += 50;
+        else if(this.scoreNum >5 && this.scoreNum <= 10 ) {
+            this.score += 20;
             this.cost_time = 2;
+        }
+        else if(this.scoreNum > 10 && this.scoreNum <= 20 ) {
+            this.score += 40;
+            this.cost_time = 1;
+        }
+        else if(this.scoreNum > 20 && this.scoreNum <= 40) {
+            this.score += 80;
+            this.cost_time = 0.5;
+        }
+        else if(this.scoreNum >40 && this.scoreNum <= 100 ) {
+            this.score += 160;
+            this.cost_time = 0.3;
         }
         else {
             this.score += 100;
@@ -220,7 +220,7 @@ var Gamelayer = cc.Layer.extend({
         var scene = cc.Scene.create();
         var gameover = new Gameoverlayer();
         scene.addChild(gameover);
-        gameover.init();
+//        gameover.init();
         cc.Director.getInstance().replaceScene(scene);
     }
  }

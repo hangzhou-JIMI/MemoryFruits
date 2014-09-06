@@ -39,7 +39,8 @@
         //SingleEngineFile:'',
         appFiles:[
             'src/resource.js',
-            'src/ui_tittle.js',
+            'src/MyApp.js',
+            'src/tittlelayer.js',
             'src/gamelayer.js',
             'src/gameoverlayer.js'
         ]

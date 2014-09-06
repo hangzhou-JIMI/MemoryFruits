@@ -56,6 +56,7 @@ var Gameoverlayer = cc.Layer.extend({
         this.txt_lab.setColor(cc.c3(0,0,0));
         this.addChild(this.txt_lab);
 
+        window.shareData.tTitle = "你敏捷的头脑超越"+parseInt(gscore/130>100?100:gscore/130)+"%人类的极限";
     },
 
     on_reset:function()
@@ -85,6 +86,7 @@ var Gameoverlayer = cc.Layer.extend({
 
     WeiXinShareBtn:function()
     {
+        var size = cc.Director.getInstance().getWinSize();
         var scaleToA = cc.ScaleTo.create(0.1,0.9,0.9);
         var scaleToB = cc.ScaleTo.create(0.1, 1, 1);
         var func = cc.CallFunc.create(function(){
@@ -94,7 +96,12 @@ var Gameoverlayer = cc.Layer.extend({
             }
             else
             {
-                window.shareData.tTitle = "你敏捷的头脑超越"+parseInt(gscore/130>100?100:gscore/130)+"%人类的极限";
+                var share_layer = cc.LayerColor.create(cc.c4b(255,255,255,100));
+                var share_label = cc.LabelTTF.create("点击分享朋友圈","",20);
+                share_label.setPosition(size.width- 100 , size.height -100);
+                //share_layer.addTouchEventListener()
+                this.addChild(share_layer);
+                this.addChild(share_label);
             }
         },this);
         this.shareMenu.runAction(cc.Sequence.create(scaleToA,scaleToB,func));
