@@ -97,11 +97,11 @@ var Gameoverlayer = cc.Layer.extend({
         var scaleToA = cc.ScaleTo.create(0.1,0.9,0.9);
         var scaleToB = cc.ScaleTo.create(0.1, 1, 1);
         var func = cc.CallFunc.create(function(){
-            if (typeof WeixinJSBridge == "undefined")
-            {
-                alert("请通过微信分享文章");
-            }
-            else
+//            if (typeof WeixinJSBridge == "undefined")
+//            {
+//                alert("请通过微信分享文章");
+//            }
+//            else
             {
                 this.share_layer = cc.LayerColor.create(cc.c4b(0,0,0,200));
                 this.share_label = cc.LabelTTF.create("点击分享朋友圈↑↑↑","",30);
@@ -122,7 +122,7 @@ var Gameoverlayer = cc.Layer.extend({
             this.share_layer.removeFromParent(true);
             this.share_layer = null;
         }
-        if(this.share_label!=null)
+        if(this.share_label != null)
         {
             this.share_label.removeFromParent(true);
             this.share_label = null;
@@ -134,8 +134,7 @@ var Gameoverlayer = cc.Layer.extend({
         this.remove_sharelayer();
     },
 
-    onTouchBegan:function(touch, event)
-    {
+    onTouchesEnded:function (touches, event) {
         this.remove_sharelayer();
     }
 

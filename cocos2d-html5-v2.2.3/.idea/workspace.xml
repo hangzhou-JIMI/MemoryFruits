@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameoverlayer.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="gameoverlayer.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/memoryfruit/src/gameoverlayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="2235">
-              <caret line="102" column="13" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.45634267" vertical-offset="1268" max-vertical-offset="2220">
+              <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="ClickAndMoveTest.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.Trash/samples/tests/ClickAndMoveTest/ClickAndMoveTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1515">
-              <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="45" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="908" max-vertical-offset="1515">
+              <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -78,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/memoryfruit/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32125205" vertical-offset="285" max-vertical-offset="1425">
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1425">
               <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
             </state>
@@ -181,10 +181,10 @@
         <option value="$PROJECT_DIR$/memoryfruit/cocos2d.js" />
         <option value="dup.baidustatic.com/tpl/ctm3.js" />
         <option value="$PROJECT_DIR$/memoryfruit/src/MyApp.js" />
-        <option value="$PROJECT_DIR$/memoryfruit/src/gameoverlayer.js" />
         <option value="$PROJECT_DIR$/memoryfruit/src/resource.js" />
         <option value="$PROJECT_DIR$/memoryfruit/src/gamelayer.js" />
         <option value="$PROJECT_DIR$/memoryfruit/main.js" />
+        <option value="$PROJECT_DIR$/memoryfruit/src/gameoverlayer.js" />
       </list>
     </option>
   </component>
@@ -1054,22 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.Trash/samples/tests/ClickAndMoveTest/ClickAndMoveTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1515">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="45" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/memoryfruit/src/gameoverlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1378" max-vertical-offset="2235">
-          <caret line="102" column="13" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/memoryfruit/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9583333" vertical-offset="368" max-vertical-offset="975">
@@ -1096,8 +1080,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/memoryfruit/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32125205" vertical-offset="285" max-vertical-offset="1425">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1425">
           <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.Trash/samples/tests/ClickAndMoveTest/ClickAndMoveTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="908" max-vertical-offset="1515">
+          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/memoryfruit/src/gameoverlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45634267" vertical-offset="1268" max-vertical-offset="2220">
+          <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
           <folding />
         </state>
       </provider>
