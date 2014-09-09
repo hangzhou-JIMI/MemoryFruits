@@ -105,7 +105,7 @@ var Gamelayer = cc.Layer.extend({
                 this.on_fail();
             }
         }
-        //cc.log("int");
+//        cc.log("int");
     },
 
     in_fruit:function(drtime)
@@ -195,15 +195,15 @@ var Gamelayer = cc.Layer.extend({
         }
         else if(this.scoreNum > 10 && this.scoreNum <= 20 ) {
             this.score += 40;
-            this.cost_time = 1;
+            this.cost_time = 1.5;
         }
         else if(this.scoreNum > 20 && this.scoreNum <= 40) {
             this.score += 80;
-            this.cost_time = 0.5;
+            this.cost_time = 1.3;
         }
         else if(this.scoreNum >40 && this.scoreNum <= 100 ) {
             this.score += 160;
-            this.cost_time = 0.3;
+            this.cost_time = 1.1;
         }
         else {
             this.score += 100;
