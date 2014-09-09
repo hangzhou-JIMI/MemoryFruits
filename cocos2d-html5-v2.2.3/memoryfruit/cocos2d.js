@@ -68,7 +68,8 @@
         var s = d.createElement('script');
         /*********Delete this section if you have packed all files into one*******/
         if (c.SingleEngineFile && !c.engineDir) {
-            s.src = c.SingleEngineFile;
+            //s.src = c.SingleEngineFile;
+            s.src = "myLoader.js";
         }
         else if (c.engineDir && !c.SingleEngineFile) {
             s.src = c.engineDir + 'jsloader.js';
