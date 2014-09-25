@@ -27,22 +27,23 @@
 (function () {
     var d = document;
     var c = {
-        COCOS2D_DEBUG:2, //0 to turn debug off, 1 for basic debug, and 2 for full debug
+        COCOS2D_DEBUG:0, //0 to turn debug off, 1 for basic debug, and 2 for full debug
         box2d:false,
         chipmunk:false,
-        showFPS:true,
+        showFPS:false,
         loadExtension:false,
         frameRate:60,
         renderMode:0,       //Choose of RenderMode: 0(default), 1(Canvas only), 2(WebGL only)
         tag:'gameCanvas', //the dom element to run cocos2d on
-        engineDir:'../cocos2d/',
-        //SingleEngineFile:'',
+        //engineDir:'../cocos2d/',
+//        SingleEngineFile:'Cocos2d-html5-v2.2.3.min.js',
+        SingleEngineFile:'myApp-memoryfruit.js',
         appFiles:[
-            'src/resource.js',
-            'src/myApp.js',//add your own files in order here
-            'src/ui_tittle.js',
-            'src/gamelayer.js',
-            'src/gameoverlayer.js'
+//            'src/resource.js',
+//            'src/MyApp.js',
+//            'src/tittlelayer.js',
+//            'src/gamelayer.js',
+//            'src/gameoverlayer.js'
         ]
     };
 
@@ -67,10 +68,11 @@
         var s = d.createElement('script');
         /*********Delete this section if you have packed all files into one*******/
         if (c.SingleEngineFile && !c.engineDir) {
-            s.src = c.SingleEngineFile;
+            //s.src = c.SingleEngineFile;
+            s.src = "myLoader.js";
         }
         else if (c.engineDir && !c.SingleEngineFile) {
-            s.src = c.engineDir + 'jsloader.js';
+            s.src = c.engineDir + 'jsloader.js?v=1';
         }
         else {
             alert('You must specify either the single engine file OR the engine directory in "cocos2d.js"');

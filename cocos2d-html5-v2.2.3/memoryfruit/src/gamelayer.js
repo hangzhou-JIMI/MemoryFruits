@@ -13,11 +13,16 @@ var Gamelayer = cc.Layer.extend({
     score:0,
     scoreNum:0,
     score_label:null,
+    cd_bg_layer:null,
+    cd_layer:null,
 
     outfruit:null,
     lastfruit:0,
     indexfruit:0,
     res_fruits:null,
+
+    cost_time:3,
+    start_time:0,
 
     init:function()
     {
@@ -26,6 +31,8 @@ var Gamelayer = cc.Layer.extend({
         gscore = 0;
         this.score = 0;
         this.scoreNum = 0;
+        this.cost_time = 5;
+        this.start_time = new Date().getTime();
 
         var size = cc.Director.getInstance().getWinSize();
 
@@ -46,21 +53,32 @@ var Gamelayer = cc.Layer.extend({
         yesMenu.setPosition(size.width/2+150,size.height/2-250);
         noMenu.setPosition(size.width/2-150,size.height/2-250);
 
-        var tittle_lab = cc.LabelTTF.create("请判断当前水果是否与上一次相同","黑体",25);
+        var tittle_lab = cc.LabelTTF.create("限定时间内判断水果是否与上个相同","Arial",25);
         tittle_lab.setAnchorPoint(0.5,0.5);
         this.addChild(tittle_lab);
         tittle_lab.setPosition(size.width/2,size.height-150);
         tittle_lab.setColor(cc.c4b(200,0,0,255));
 
-        this.score_label = cc.LabelTTF.create("您当前的分数为:0","黑体",40);
+        this.score_label = cc.LabelTTF.create("您当前的分数为:0","Arial",40);
         this.score_label.setAnchorPoint(0,1);
         this.addChild(this.score_label);
         this.score_label.setPosition(50,size.height-50);
         this.score_label.setColor(cc.c4b(0,0,0,255));
 
-        this.res_fruits = [s_fruit_shumei,s_fruit_boluo,s_fruit_yingtao,s_fruit_ningmeng,s_fruit_caomei,s_fruit_li,s_fruit_putao,s_fruit_pingguo,s_fruit_taozi,s_fruit_xigua];
+        this.cd_bg_layer = cc.LayerColor.create(cc.c4b(50,200,50,255),100 , 40);
+        this.cd_bg_layer.setAnchorPoint(1,0);
+        this.cd_bg_layer.setPosition(5,size.height - 170 );
+        this.cd_layer = cc.LayerColor.create(cc.c4b(200,0,0,255),100,40);
+        this.cd_layer.setAnchorPoint(1,0);
+        this.cd_layer.setPosition(5,size.height - 170);
+        this.addChild(this.cd_bg_layer);
+        this.addChild(this.cd_layer);
 
-        this.lastfruit = parseInt(Math.random()*10)%10;
+        this.scheduleUpdate();
+
+        this.res_fruits = [s_fruit_shumei,s_fruit_boluo,s_fruit_caomei,s_fruit_putao,s_fruit_xigua];
+
+        this.lastfruit = parseInt(Math.random()*10)%5;
         this.indexfruit = this.lastfruit;
         this.fruit = cc.Sprite.create(this.res_fruits[this.lastfruit]);
         this.fruit.setPosition(size.width/2,size.height/2+100);
@@ -73,9 +91,28 @@ var Gamelayer = cc.Layer.extend({
 
     },
 
+    update:function()
+    {
+        if(this.cost_time>0)
+        {
+            var dis = new Date().getTime() - this.start_time;
+            var per = dis / (this.cost_time*1000);
+            if(per>1) per = 1;
+            this.cd_layer.setScaleX(1.0-per);
+
+            if(per>=1)
+            {
+                this.on_fail();
+            }
+        }
+//        cc.log("int");
+    },
+
     in_fruit:function(drtime)
     {
         if(!arguments[0]) drtime = 0.2;
+
+        this.start_time = new Date().getTime();
 
         var size = cc.Director.getInstance().getWinSize();
 
@@ -83,7 +120,7 @@ var Gamelayer = cc.Layer.extend({
         var tomove = cc.MoveTo.create(drtime,cc.p(size.width/2,size.height/2+100));
 
         var win = (Math.random()>0.3);
-        var index = win ? this.lastfruit :parseInt(Math.random()*10)%10;
+        var index = win ? this.lastfruit :parseInt(Math.random()*10)%5;
 
         this.indexfruit = index;
         this.fruit = cc.Sprite.create(this.res_fruits[index]);
@@ -145,21 +182,33 @@ var Gamelayer = cc.Layer.extend({
     },
 
     //win
-    on_win:function()
-    {
+    on_win:function() {
         this.scoreNum++;
-        if(this.scoreNum<=5)
+        if (this.scoreNum <= 5)
+        {
             this.score += 10;
-        else if(this.scoreNum >5 && this.scoreNum <= 10 )
-            this.score += 15;
-        else if(this.scoreNum > 10 && this.scoreNum <= 20 )
+            this.cost_time = 3;
+        }
+        else if(this.scoreNum >5 && this.scoreNum <= 10 ) {
             this.score += 20;
-        else if(this.scoreNum > 20 && this.scoreNum <= 40)
-            this.score += 30;
-        else if(this.scoreNum >40 && this.scoreNum <= 100 )
-            this.score += 50;
-        else
+            this.cost_time = 2;
+        }
+        else if(this.scoreNum > 10 && this.scoreNum <= 20 ) {
+            this.score += 40;
+            this.cost_time = 1.5;
+        }
+        else if(this.scoreNum > 20 && this.scoreNum <= 40) {
+            this.score += 80;
+            this.cost_time = 1.3;
+        }
+        else if(this.scoreNum >40 && this.scoreNum <= 100 ) {
+            this.score += 160;
+            this.cost_time = 1.1;
+        }
+        else {
             this.score += 100;
+            this.cost_time = 1;
+        }
 
         gscore = this.score;
         this.score_label.setString("您当前的分数为:"+this.score);
